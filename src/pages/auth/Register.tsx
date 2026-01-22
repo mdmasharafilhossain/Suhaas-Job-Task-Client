@@ -70,7 +70,7 @@ export default function Register() {
       });
 
       await axios.post(
-        `${import.meta.env.BASE_API}/auth/register-via-invite`,
+        `https://job-task-eosin.vercel.app/auth/register-via-invite`,
         {
           token,
           name: data.name,

@@ -66,7 +66,7 @@ export default function Login() {
       dispatch(authApi.util.invalidateTags(["Me"]));
 
    
-      navigate("/projects");
+      navigate("/");
       
     } catch (error: any) {
      

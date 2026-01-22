@@ -2,7 +2,9 @@ import { fetchBaseQuery } from "@reduxjs/toolkit/query";
 
 
 const baseApi = fetchBaseQuery({
-  baseUrl: import.meta.env.BASE_API,
+  
+  baseUrl: "https://job-task-eosin.vercel.app",
+  
   credentials: "include",
 });
 
