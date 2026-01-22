@@ -107,14 +107,14 @@ export default function Projects() {
                       >
                         <div className="flex justify-between items-start mb-3 gap-2">
                           <div className="flex items-center min-w-0">
-                            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-linear-to-br from-blue-100 to-indigo-100 flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0">
+                            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-linear-to-br from-blue-100 to-indigo-100 flex items-center justify-center mr-2 sm:mr-3 shrink-0">
                               <FiFolder className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
                             </div>
                             <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors truncate text-sm sm:text-base">
                               {project.name}
                             </h3>
                           </div>
-                          <div className="flex space-x-1 sm:space-x-2 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">
+                          <div className="flex space-x-1 sm:space-x-2 opacity-0 group-hover:opacity-100 transition-opacity shrink-0">
                             <button className="p-1 sm:p-1.5 hover:bg-gray-100 rounded-lg transition-colors">
                               <FiEdit className="w-3 h-3 sm:w-4 sm:h-4 text-gray-500" />
                             </button>
@@ -146,7 +146,7 @@ export default function Projects() {
               
               <div className="p-4 sm:p-6">
                 <div className="flex items-center mb-4 sm:mb-6">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-linear-to-br from-blue-600 to-indigo-700 flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-linear-to-br from-blue-600 to-indigo-700 flex items-center justify-center mr-2 sm:mr-3 shrink-0">
                     <FiPlus className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                   </div>
                   <h2 className="text-lg sm:text-xl font-semibold text-gray-900 truncate">
@@ -204,7 +204,7 @@ export default function Projects() {
                           errors.description 
                             ? 'border-red-300 focus:ring-red-500 focus:border-red-500' 
                             : 'border-gray-300 focus:ring-blue-500 focus:border-blue-500'
-                        } focus:outline-none focus:ring-2 transition duration-200 text-sm sm:text-base min-h-[80px] sm:min-h-[100px] resize-y`}
+                        } focus:outline-none focus:ring-2 transition duration-200 text-sm sm:text-base min-h-20 sm:min-h-25 resize-y`}
                         placeholder="Describe your project..."
                         disabled={isSubmitting}
                       />

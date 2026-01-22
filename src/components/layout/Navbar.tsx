@@ -133,12 +133,12 @@ export default function Navbar() {
                                 </div>
                               </NavLink>
                               <NavLink 
-                                to="/audit-logs" 
+                                to="/projects-management" 
                                 className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
                               >
                                 <div className="flex items-center">
                                   <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mr-3"></div>
-                                  Audit Logs
+                                    Project Management
                                 </div>
                               </NavLink>
                             </div>
@@ -284,11 +284,11 @@ export default function Navbar() {
                           Invite User
                         </NavLink>
                         <NavLink 
-                          to="/audit-logs" 
+                          to="/projects-management" 
                           onClick={() => setIsMenuOpen(false)}
                           className="block px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-gray-50 transition-all"
                         >
-                          Audit Logs
+                          Project Management
                         </NavLink>
                       </div>
                     </>

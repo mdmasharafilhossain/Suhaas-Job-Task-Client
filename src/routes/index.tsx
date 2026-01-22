@@ -15,6 +15,7 @@ import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 import UserManagement from "../components/user/UserManagement";
 import Projects from "../pages/project/Projects";
+import AdminProjects from "../pages/project/AdminProjects";
 
 
 // const Register = lazy(() => import("../pages/Register"));
@@ -50,10 +51,10 @@ export const router = createBrowserRouter([
       Component: Projects,
       path:'/projects'
     },
-    // {
-    //   Component: About,
-    //   path:'/about'
-    // },
+    {
+      Component: AdminProjects,
+      path:'/projects-management'
+    },
     // {
     //   Component: Features,
     //   path:'/features'
