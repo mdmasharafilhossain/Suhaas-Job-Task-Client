@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import Swal from "sweetalert2";
-import { FiPlus, FiFolder,  FiLoader } from "react-icons/fi";
+import { FiPlus, FiFolder,  FiLoader, FiRefreshCw } from "react-icons/fi";
 import { projectSchema, type ProjectFormData } from "../../schema/projects/project.schema";
 
 
@@ -57,11 +57,11 @@ export default function Projects() {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="flex flex-col items-center">
-          <FiLoader className="w-8 h-8 text-blue-600 animate-spin mb-2" />
-          <p className="text-gray-600">Loading projects...</p>
-        </div>
-      </div>
+              <div className="flex flex-col items-center">
+                <FiRefreshCw className="w-8 h-8 text-blue-600 animate-spin mb-2" />
+                
+              </div>
+            </div>
     );
   }
 

@@ -7,7 +7,7 @@ import {
 } from "../../redux/features/project/projects.api";
 import { useState } from "react";
 import Swal from "sweetalert2";
-import { FiEdit, FiTrash2, FiSave, FiX, FiFolder, FiLoader } from "react-icons/fi";
+import { FiEdit, FiTrash2, FiSave, FiX, FiFolder, FiLoader, FiRefreshCw } from "react-icons/fi";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -121,11 +121,11 @@ export default function AdminProjects() {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="flex flex-col items-center">
-          <FiLoader className="w-8 h-8 text-blue-600 animate-spin mb-2" />
-          <p className="text-gray-600">Loading projects...</p>
-        </div>
-      </div>
+              <div className="flex flex-col items-center">
+                <FiRefreshCw className="w-8 h-8 text-blue-600 animate-spin mb-2" />
+                
+              </div>
+            </div>
     );
   }
 

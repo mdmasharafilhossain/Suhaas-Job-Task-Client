@@ -60,7 +60,7 @@ export default function InviteUser() {
       const res = await inviteUser({ email: data.email, role: data.role }).unwrap();
       
       await Swal.fire({
-        title: '🎉 Invite Sent!',
+        title: 'Invite Sent!',
         html: `
           <div class="text-left">
             <p class="mb-3">Invitation has been sent to:</p>

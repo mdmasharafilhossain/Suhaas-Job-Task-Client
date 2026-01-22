@@ -108,7 +108,7 @@ export default function UserManagement() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="flex flex-col items-center">
           <FiRefreshCw className="w-8 h-8 text-blue-600 animate-spin mb-2" />
-          <p className="text-gray-600">Loading users...</p>
+          
         </div>
       </div>
     );

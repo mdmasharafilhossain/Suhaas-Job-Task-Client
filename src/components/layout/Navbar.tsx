@@ -1,10 +1,12 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { NavLink, useNavigate } from "react-router";
 import { useState, useEffect } from "react";
 import { logout as logoutAction } from "../../redux/store/store.authSlice";
 import { useLogoutMutation } from "../../redux/features/auth/auth.api";
 import { useAppDispatch, useAppSelector } from "../../redux/store/hooks";
 import { FiMenu, FiX, FiChevronDown, FiUser } from "react-icons/fi";
+import Swal from "sweetalert2";
 
 export default function Navbar() {
   const { user, isAuthenticated } = useAppSelector((state) => state.auth);
@@ -37,11 +39,41 @@ export default function Navbar() {
   }, []);
 
   const handleLogout = async () => {
-    try {
-      await logoutApi().unwrap();
-    } finally {
-      dispatch(logoutAction());
-      navigate("/login");
+    const result = await Swal.fire({
+      title: 'Are you sure?',
+      text: 'You will be logged out of your account.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#ef4444',
+      cancelButtonColor: '#6b7280',
+      confirmButtonText: 'Yes, logout',
+      cancelButtonText: 'Cancel',
+      reverseButtons: true,
+    });
+
+    if (result.isConfirmed) {
+      try {
+        await logoutApi().unwrap();
+        
+        await Swal.fire({
+          title: 'Logged out!',
+          text: 'You have been successfully logged out.',
+          icon: 'success',
+          confirmButtonColor: '#10b981',
+          timer: 2000,
+          timerProgressBar: true,
+        });
+      } catch (error: any) {
+        await Swal.fire({
+          title: 'Logout Error',
+          text: error?.data?.message || 'Failed to logout properly',
+          icon: 'error',
+          confirmButtonColor: '#ef4444',
+        });
+      } finally {
+        dispatch(logoutAction());
+        navigate("/login");
+      }
     }
   };
 
