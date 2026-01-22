@@ -13,7 +13,7 @@ const Footer:FC = () => {
         
           <div>
             <div className="flex items-center mb-4">
-              <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mr-3 shadow-lg">
+              <div className="h-12 w-12 rounded-xl bg-linear-to-br from-blue-500 to-indigo-600 flex items-center justify-center mr-3 shadow-lg">
                 <FiFolder className="h-6 w-6 text-white" />
               </div>
               <h2 className="text-2xl font-bold">ProjectFlow</h2>
