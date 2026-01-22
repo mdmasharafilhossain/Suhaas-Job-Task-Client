@@ -13,6 +13,7 @@ import App from "../App";
 // import { lazy } from "react";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
+import UserManagement from "../components/user/UserManagement";
 
 
 // const Register = lazy(() => import("../pages/Register"));
@@ -40,10 +41,10 @@ export const router = createBrowserRouter([
       Component: Register,
       path: "/register"
     },
-    // {
-    //   Component : Unauthorized,
-    //   path:'/unauthorized'
-    // },
+    {
+      Component : UserManagement,
+      path:'/users'
+    },
     // {
     //   Component: Home,
     //   path:'/'

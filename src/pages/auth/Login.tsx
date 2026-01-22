@@ -10,23 +10,11 @@ import Swal from "sweetalert2";
 import { FiMail, FiLock, FiEye, FiEyeOff, FiLogIn } from "react-icons/fi";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { loginSchema, type LoginFormData } from "../../schema/auth/login.schema";
 
-// Zod validation schema
-const loginSchema = z.object({
-  email: z
-    .string()
-    .min(1, { message: "Email is required" })
-    .email({ message: "Please enter a valid email address" })
-    .trim(),
-  password: z
-    .string()
-    .min(1, { message: "Password is required" })
-    .min(6, { message: "Password must be at least 6 characters" })
-    .trim(),
-});
 
-type LoginFormData = z.infer<typeof loginSchema>;
+
+
 
 export default function Login() {
   const [login] = useLoginMutation();
