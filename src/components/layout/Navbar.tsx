@@ -20,7 +20,7 @@ export default function Navbar() {
   const primaryHover = "hover:bg-blue-800";
   const primaryLight = "bg-blue-50";
   const secondaryColor = "text-indigo-600";
-  const secondaryHover = "hover:text-indigo-800";
+ 
   
   // Handle scroll effect
   useEffect(() => {
@@ -61,7 +61,7 @@ export default function Navbar() {
   
   const activeLinkClass = `px-4 py-2.5 rounded-lg font-medium transition-all duration-300 ease-in-out ${primaryColor} text-white`;
   
-  const adminLinkClass = `px-4 py-2.5 rounded-lg font-medium transition-all duration-300 ease-in-out text-gray-700 hover:text-indigo-700`;
+ 
 
   return (
     <>

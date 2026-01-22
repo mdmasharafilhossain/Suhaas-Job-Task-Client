@@ -28,7 +28,7 @@ export default function Login() {
     handleSubmit,
     formState: { errors, isSubmitting },
     setError,
-    reset,
+   
   } = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
     mode: "onBlur",
@@ -66,7 +66,7 @@ export default function Login() {
       dispatch(authApi.util.invalidateTags(["Me"]));
 
    
-    //   navigate("/dashboard");
+      navigate("/projects");
       
     } catch (error: any) {
      
