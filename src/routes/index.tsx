@@ -16,6 +16,7 @@ import Register from "../pages/auth/Register";
 import UserManagement from "../components/user/UserManagement";
 import Projects from "../pages/project/Projects";
 import AdminProjects from "../pages/project/AdminProjects";
+import InviteUser from "../pages/admin/InviteUser";
 
 
 // const Register = lazy(() => import("../pages/Register"));
@@ -55,10 +56,10 @@ export const router = createBrowserRouter([
       Component: AdminProjects,
       path:'/projects-management'
     },
-    // {
-    //   Component: Features,
-    //   path:'/features'
-    // },
+    {
+      Component: InviteUser,
+      path:'/invite'
+    },
     // {
     //   Component: Contact,
     //   path:'/contact'

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import Swal from "sweetalert2";
-import { FiPlus, FiFolder, FiEdit, FiTrash2, FiLoader } from "react-icons/fi";
+import { FiPlus, FiFolder,  FiLoader } from "react-icons/fi";
 import { projectSchema, type ProjectFormData } from "../../schema/projects/project.schema";
 
 
@@ -114,14 +114,7 @@ export default function Projects() {
                               {project.name}
                             </h3>
                           </div>
-                          <div className="flex space-x-1 sm:space-x-2 opacity-0 group-hover:opacity-100 transition-opacity shrink-0">
-                            <button className="p-1 sm:p-1.5 hover:bg-gray-100 rounded-lg transition-colors">
-                              <FiEdit className="w-3 h-3 sm:w-4 sm:h-4 text-gray-500" />
-                            </button>
-                            <button className="p-1 sm:p-1.5 hover:bg-red-50 rounded-lg transition-colors">
-                              <FiTrash2 className="w-3 h-3 sm:w-4 sm:h-4 text-red-500" />
-                            </button>
-                          </div>
+                          
                         </div>
                         <p className="text-gray-600 text-xs sm:text-sm line-clamp-2 mb-3 sm:mb-4">
                           {project.description}
