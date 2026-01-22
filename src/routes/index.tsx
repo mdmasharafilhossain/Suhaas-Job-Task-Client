@@ -18,6 +18,8 @@ import Projects from "../pages/project/Projects";
 import AdminProjects from "../pages/project/AdminProjects";
 import InviteUser from "../pages/admin/InviteUser";
 import ErrorPage from "../pages/ErrorPage";
+import AdminRoute from "../pages/auth/AdminRoute";
+import PrivateRoute from "../pages/auth/PrivateRoute";
 
 
 // const Register = lazy(() => import("../pages/Register"));
@@ -46,20 +48,24 @@ export const router = createBrowserRouter([
       path: "/register"
     },
     {
-      Component : UserManagement,
-      path:'/users'
+      
+      path:'/users',
+      element: <AdminRoute><UserManagement/></AdminRoute>
     },
     {
-      Component: Projects,
-      path:'/projects'
+    
+      path:'/projects',
+      element: <PrivateRoute><Projects/></PrivateRoute>
     },
     {
-      Component: AdminProjects,
-      path:'/projects-management'
+      
+      path:'/projects-management',
+        element: <AdminRoute><AdminProjects/></AdminRoute>
     },
     {
-      Component: InviteUser,
-      path:'/invite'
+     
+      path:'/invite',
+        element: <AdminRoute><InviteUser/></AdminRoute>
     },
     // {
     //   Component: Contact,

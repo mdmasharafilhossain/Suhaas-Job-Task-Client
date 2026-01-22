@@ -1,3 +1,5 @@
+import type { JSX } from "react/jsx-dev-runtime";
+
 export type Role = "ADMIN" | "MANAGER" | "STAFF";
 export type UserStatus = "ACTIVE" | "INACTIVE";
 
@@ -24,4 +26,7 @@ export interface AuditLog {
   entity: string;
   entityId: string;
   createdAt: string;
+}
+export interface Props {
+  children: JSX.Element;
 }

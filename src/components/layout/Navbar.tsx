@@ -89,13 +89,7 @@ export default function Navbar() {
               <div className="hidden md:ml-10 md:flex md:items-center md:space-x-1">
                 {isAuthenticated && (
                   <>
-                    <NavLink 
-                      to="/dashboard" 
-                      className={({ isActive }) => isActive ? activeLinkClass : baseLinkClass}
-                    >
-                      Dashboard
-                      <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 group-hover:w-4/5 transition-all duration-300"></span>
-                    </NavLink>
+                    
 
                     <NavLink 
                       to="/projects" 
@@ -235,19 +229,7 @@ export default function Navbar() {
                     <p className="text-xs text-gray-500 capitalize">{user?.role?.toLowerCase()}</p>
                   </div>
                   
-                  <NavLink 
-                    to="/dashboard" 
-                    onClick={() => setIsMenuOpen(false)}
-                    className={({ isActive }) => 
-                      `block px-4 py-3 rounded-lg font-medium transition-all ${
-                        isActive 
-                          ? `${primaryColor} text-white` 
-                          : "text-gray-700 hover:bg-gray-50"
-                      }`
-                    }
-                  >
-                    Dashboard
-                  </NavLink>
+                  
                   
                   <NavLink 
                     to="/projects" 
