@@ -74,7 +74,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo and Brand */}
+        
             <div className="flex items-center">
               <div className="shrink-0 flex items-center">
                 <span className={`text-2xl font-bold ${secondaryColor}`}>
@@ -85,7 +85,7 @@ export default function Navbar() {
                 </span>
               </div>
 
-              {/* Desktop Navigation - Left */}
+         
               <div className="hidden md:ml-10 md:flex md:items-center md:space-x-1">
                 {isAuthenticated && (
                   <>
@@ -151,7 +151,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Desktop Navigation - Right */}
+          
             <div className="hidden md:flex md:items-center md:space-x-4">
               {isAuthenticated ? (
                 <>
@@ -171,7 +171,7 @@ export default function Navbar() {
                       <FiChevronDown className={`transition-transform duration-300 ${showUserMenu ? 'rotate-180' : ''}`} />
                     </button>
                     
-                    {/* User Dropdown Menu */}
+                   
                     {showUserMenu && (
                       <div className="absolute right-0 mt-2 w-56 origin-top-right rounded-xl bg-white shadow-lg border border-gray-100 z-10">
                         <div className="py-2">
@@ -202,7 +202,7 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Mobile menu button */}
+          
             <div className="md:hidden flex items-center">
               {isAuthenticated && (
                 <div className="mr-4 flex items-center">
@@ -224,7 +224,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
+   
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100 shadow-inner">
             <div className="px-4 pt-4 pb-6 space-y-1">
@@ -297,7 +297,7 @@ export default function Navbar() {
                   <div className="pt-4 border-t border-gray-100">
                     <button
                       onClick={handleLogout}
-                      className="w-full px-4 py-3 rounded-lg font-medium text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all shadow-sm flex items-center justify-center"
+                      className="w-full px-4 py-3 rounded-lg font-medium text-white bg-linear-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 transition-all shadow-sm flex items-center justify-center"
                     >
                       Logout
                       <span className="ml-2">→</span>
@@ -320,7 +320,7 @@ export default function Navbar() {
         )}
       </nav>
       
-      {/* Close dropdown when clicking outside */}
+    
       {showUserMenu && (
         <div 
           className="fixed inset-0 z-40" 
