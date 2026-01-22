@@ -15,14 +15,14 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
 
-  // Professional color scheme
+
   const primaryColor = "bg-blue-700";
   const primaryHover = "hover:bg-blue-800";
   const primaryLight = "bg-blue-50";
   const secondaryColor = "text-indigo-600";
  
   
-  // Handle scroll effect
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -45,7 +45,7 @@ export default function Navbar() {
     }
   };
 
-  // Close mobile menu on resize
+ 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
@@ -78,7 +78,7 @@ export default function Navbar() {
             <div className="flex items-center">
               <div className="shrink-0 flex items-center">
                 <span className={`text-2xl font-bold ${secondaryColor}`}>
-                  JobTask
+                  ProjectFlow
                 </span>
                 
               </div>
@@ -154,7 +154,7 @@ export default function Navbar() {
             <div className="hidden md:flex md:items-center md:space-x-4">
               {isAuthenticated ? (
                 <>
-                  {/* User Profile Dropdown */}
+                  
                   <div className="relative">
                     <button 
                       onClick={() => setShowUserMenu(!showUserMenu)}
