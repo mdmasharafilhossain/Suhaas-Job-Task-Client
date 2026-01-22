@@ -55,7 +55,7 @@ const Banner: React.FC = () => {
 
           {user?.role === "ADMIN" && (
             <button
-              onClick={() => navigate("/admin/projects")}
+              onClick={() => navigate("/projects-management")}
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl border border-white/40 text-white font-semibold hover:bg-white/10 transition"
             >
               Manage Projects
