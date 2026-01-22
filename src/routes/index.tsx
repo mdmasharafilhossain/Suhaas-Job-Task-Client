@@ -17,6 +17,7 @@ import UserManagement from "../components/user/UserManagement";
 import Projects from "../pages/project/Projects";
 import AdminProjects from "../pages/project/AdminProjects";
 import InviteUser from "../pages/admin/InviteUser";
+import ErrorPage from "../pages/ErrorPage";
 
 
 // const Register = lazy(() => import("../pages/Register"));
@@ -34,7 +35,7 @@ export const router = createBrowserRouter([
   {
     Component: App,
     path: "/",
-    // errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage/>,
     children : [
     {
       Component: Login,

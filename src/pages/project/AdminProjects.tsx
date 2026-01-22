@@ -300,12 +300,7 @@ export default function AdminProjects() {
           <div className="h-2 bg-linear-to-r from-indigo-700 to-blue-600"></div>
         </div>
 
-        <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-          <p className="text-sm text-blue-700 flex items-center">
-            <span className="mr-2">💡</span>
-            You can edit project details or delete projects permanently. All changes are logged.
-          </p>
-        </div>
+       
       </div>
     </div>
   );
