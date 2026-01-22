@@ -8,9 +8,9 @@ const Footer:FC = () => {
   return (
     <footer className="bg-linear-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
-        {/* TOP GRID */}
+       
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* BRAND */}
+        
           <div>
             <div className="flex items-center mb-4">
               <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mr-3 shadow-lg">
@@ -37,7 +37,7 @@ const Footer:FC = () => {
             </div>
           </div>
 
-          {/* PRODUCT */}
+         
           <div>
             <h3 className="footer-title">Product</h3>
             <ul className="footer-list">
@@ -48,7 +48,7 @@ const Footer:FC = () => {
             </ul>
           </div>
 
-          {/* COMPANY */}
+        
           <div>
             <h3 className="footer-title">Company</h3>
             <ul className="footer-list">
@@ -59,7 +59,7 @@ const Footer:FC = () => {
             </ul>
           </div>
 
-          {/* SUPPORT */}
+     
           <div>
             <h3 className="footer-title">Support</h3>
             <ul className="footer-list">
@@ -71,7 +71,7 @@ const Footer:FC = () => {
           </div>
         </div>
 
-        {/* DIVIDER */}
+       
         <div className="border-t border-gray-700 mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
@@ -87,7 +87,7 @@ const Footer:FC = () => {
         </div>
       </div>
 
-      {/* TAILWIND UTILITY STYLES */}
+    
       <style>
         {`
           .footer-title {
