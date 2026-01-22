@@ -80,9 +80,7 @@ export default function Navbar() {
                 <span className={`text-2xl font-bold ${secondaryColor}`}>
                   JobTask
                 </span>
-                <span className="ml-1.5 text-xs font-semibold bg-linear-to-r from-blue-600 to-indigo-600 text-white px-2 py-1 rounded-full">
-                  PRO
-                </span>
+                
               </div>
 
          
@@ -91,6 +89,13 @@ export default function Navbar() {
                   <>
                     
 
+                    <NavLink 
+                      to="/" 
+                      className={({ isActive }) => isActive ? activeLinkClass : baseLinkClass}
+                    >
+                      Home
+                      <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-600 group-hover:w-4/5 transition-all duration-300"></span>
+                    </NavLink>
                     <NavLink 
                       to="/projects" 
                       className={({ isActive }) => isActive ? activeLinkClass : baseLinkClass}
@@ -231,6 +236,19 @@ export default function Navbar() {
                   
                   
                   
+                  <NavLink 
+                    to="/" 
+                    onClick={() => setIsMenuOpen(false)}
+                    className={({ isActive }) => 
+                      `block px-4 py-3 rounded-lg font-medium transition-all ${
+                        isActive 
+                          ? `${primaryColor} text-white` 
+                          : "text-gray-700 hover:bg-gray-50"
+                      }`
+                    }
+                  >
+                    Home
+                  </NavLink>
                   <NavLink 
                     to="/projects" 
                     onClick={() => setIsMenuOpen(false)}

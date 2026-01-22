@@ -30,3 +30,10 @@ export interface AuditLog {
 export interface Props {
   children: JSX.Element;
 }
+export type UserRole = "ADMIN" | "MANAGER" | "STAFF";
+
+export interface AuthUser {
+  id: string;
+  name: string;
+  role: UserRole;
+}

@@ -20,6 +20,7 @@ import InviteUser from "../pages/admin/InviteUser";
 import ErrorPage from "../pages/ErrorPage";
 import AdminRoute from "../pages/auth/AdminRoute";
 import PrivateRoute from "../pages/auth/PrivateRoute";
+import Banner from "../pages/Home/Banner";
 
 
 // const Register = lazy(() => import("../pages/Register"));
@@ -39,6 +40,11 @@ export const router = createBrowserRouter([
     path: "/",
     errorElement: <ErrorPage/>,
     children : [
+    {
+      Component: Banner,
+      path: "/",
+      index: true
+    },
     {
       Component: Login,
       path: "/login"
