@@ -3,8 +3,7 @@ import authReducer from "../store/store.authSlice";
 import { authApi } from "../features/auth/auth.api";
 import { usersApi } from "../features/admin/user.api";
 import { projectsApi } from "../features/project/projects.api";
-// import { authApi } from "../features/auth/auth.api";
-// import { adminApi } from "../features/admin/admin.api";
+
 
 export const store = configureStore({
   reducer: {

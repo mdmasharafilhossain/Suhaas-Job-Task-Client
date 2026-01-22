@@ -1,13 +1,11 @@
-import { type ReactNode } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import type { IProps } from "../../types";
 
 
 
 
-interface IProps {
-  children: ReactNode;
-}
+
 
 export default function CommonLayout({ children }: IProps) {
   return (

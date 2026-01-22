@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { JSX } from "react/jsx-dev-runtime";
 
 export type Role = "ADMIN" | "MANAGER" | "STAFF";
@@ -36,4 +37,7 @@ export interface AuthUser {
   id: string;
   name: string;
   role: UserRole;
+}
+export interface IProps {
+  children: ReactNode;
 }
