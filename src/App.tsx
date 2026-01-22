@@ -1,13 +1,25 @@
-import './App.css'
+
+import { Outlet } from "react-router";
+import CommonLayout from "./components/layout/CommonLayout";
+
+
+
+
 
 function App() {
  
 
+
+
   return (
-    <>
-      <div>heejw;lo</div>
-    </>
-  )
+      <CommonLayout>
+      
+ <Outlet />
+     </CommonLayout>
+    
+     
+   
+  );
 }
 
-export default App
+export default App;
