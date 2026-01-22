@@ -70,7 +70,7 @@ export default function Register() {
       });
 
       await axios.post(
-        "http://localhost:5000/auth/register-via-invite",
+        `${import.meta.env.BASE_API}/auth/register-via-invite`,
         {
           token,
           name: data.name,
